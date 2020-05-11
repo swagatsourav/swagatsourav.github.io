@@ -1,5 +1,13 @@
 /* header,<section-pend>,Navigation */
 
+/* Declaring teh variable for color theme */
+:root {
+  --mt-color: #FED400;
+  /* --mt-color: #f7c221; */
+  /* --mt-color: #e3e329; */
+}
+
+
 body {
   background: #000;
   color: #666666;
@@ -7,12 +15,12 @@ body {
 }
 
 a {
-  color: #e3e329;
+  color: var(--mt-color);
   transition: 0.5s;
 }
 
 a:hover, a:active, a:focus {
-  color: #e3e329;
+  color: var(--mt-color);
   outline: none;
   text-decoration: none;
 }
@@ -33,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #e3e329;
+  background: var(--mt-color);
   color: #fff;
   width: 44px;
   height: 44px;
@@ -76,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #e3e329;
+  border-top: 6px solid var(--mt-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -119,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
-  padding: 20px 0;
+  padding: 10px 0;
   height: 72px;
   transition: all 0.5s;
 }
@@ -135,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h3 {
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -147,8 +155,14 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo h3 a, #header #logo h3 a:hover {
   color: #fff;
   padding-left: 10px;
-  border-left: 4px solid #e3e329;
 }
+
+/* Yellow border in the left side of logo text */
+#header #logo #wrapping_logo_text{
+  border-left: 4px solid var(--mt-color);
+}
+
+
 
 #header #logo img {
   padding: 0;
@@ -233,6 +247,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   #nav-menu-container {
     padding-right: 60px;
+    margin: 10px 0;
   }
 }
 
@@ -244,7 +259,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 0 8px 10px 8px;
+  padding: 8px;
+  /* padding: 0 8px 10px 8px; */
   text-decoration: none;
   display: inline-block;
   color: #fff;
@@ -253,10 +269,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   text-transform: uppercase;
   outline: none;
+  border: 1px dashed rgba(0,0,0,0);
+
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {
-  color: #e3e329;
+  color: var(--mt-color);
+  border: 1px dashed var(--mt-color);
+
+  /* border: 1px dashed var(--mt-color); */
+  /* padding: 6px; */
 }
 
 .nav-menu > li {
@@ -284,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #e3e329;
+  color: var(--mt-color);
 }
 
 .nav-menu ul ul {
@@ -357,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul li a:hover {
-  color: #e3e329;
+  color: var(--mt-color);
 }
 
 #mobile-nav ul li li {
@@ -365,7 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul li.menu-active a {
-  color: #e3e329;
+  color: var(--mt-color);
 }
 
 #mobile-nav ul .menu-has-children i {
@@ -378,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #e3e329;
+  color: var(--mt-color);
 }
 
 #mobile-nav ul .menu-has-children li a {
@@ -386,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #e3e329;
+  color: var(--mt-color);
 }
 
 #mobile-body-overly {
