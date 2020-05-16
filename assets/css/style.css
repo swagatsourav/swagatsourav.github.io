@@ -143,25 +143,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo h3 {
-  font-size: 25px;
+  /* font-size: 25px; */
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
+  line-height: 0.6;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+#header #logo h3 a#first_line {
+  /* font-size: 25px; */
+  color: #FED400;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 20px !important;
+  /* line-height: 20px; */
+  font-weight: 700;
+  box-sizing: border-box;
+  /* letter-spacing: 3px; */
+
+}
+
+#header #logo h3 a#second_line {
+  /* font-size: 25px; */
+  color: #fff;
+  font-size: 15px;
+  margin: 0;
+
+  /* line-height: 1; */
+  font-weight: 300;
+  letter-spacing: 5px;
+  box-sizing: border-box;
+  /* line-height: 20px; */
+
+}
+
 
 #header #logo h3 a, #header #logo h3 a:hover {
   color: #fff;
-  padding-left: 10px;
 }
 
 /* Yellow border in the left side of logo text */
-#header #logo #wrapping_logo_text{
+/* #header #logo #wrapping_logo_text{
   border-left: 4px solid var(--mt-color);
-}
-
+} */
 
 
 #header #logo img {
@@ -197,6 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 99;
 }
 
+
 .nav-menu li {
   position: relative;
   white-space: nowrap;
@@ -206,9 +231,18 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
 }
 
+.sf-with-ul{
+  margin-bottom: 15px;
+}
+
 .nav-menu li:hover > ul,
 .nav-menu li.sfHover > ul {
   display: block;
+  -webkit-animation: zoomOut 400ms ease both;
+  -moz-animation: zoomOut 400ms ease both;
+  -o-animation: zoomOut 400ms ease both;
+  animation: zoomOut 400ms ease both;
+
 }
 
 .nav-menu ul ul {
@@ -264,7 +298,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -286,27 +321,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul {
-  margin: 4px 0 0 0;
-  padding: 10px;
+  margin: 0 0 0 0;
+  padding: 0;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: #fff;
+  background: var(--mt-color);
+
 }
 
 .nav-menu ul li {
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .nav-menu ul li a {
   padding: 10px;
   color: #333;
-  transition: 0.3s;
+  /* transition: 0.3s; */
   display: block;
+  width:100%;
   font-size: 13px;
   text-transform: none;
 }
 
-.nav-menu ul li:hover > a {
-  color: var(--mt-color);
+.nav-menu ul li:hover {
+  background: #f49b00;
 }
 
 .nav-menu ul ul {
@@ -433,4 +470,51 @@ body.mobile-nav-active #mobile-nav {
 
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
+}
+
+
+
+.zoom-in{
+    -webkit-animation: zoomIn 400ms ease both;
+    -moz-animation: zoomIn 400ms ease both;
+    -o-animation: zoomIn 400ms ease both;
+    animation: zoomIn 400ms ease both;
+}
+@-webkit-keyframes zoomIn {
+    0% { -webkit-transform: scale(1.5); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes zoomIn {
+    0% { -moz-transform: scale(1.5); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes zoomIn {
+    0% { opacity: 0; -o-transform: scale(1.5); }
+    100% { opacity: 1; -o-transform: scale(1); }
+}
+@keyframes zoomIn {
+    0% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+.zoom-out{
+    -webkit-animation: zoomOut 400ms ease both;
+    -moz-animation: zoomOut 400ms ease both;
+    -o-animation: zoomOut 400ms ease both;
+    animation: zoomOut 400ms ease both;
+}
+@-webkit-keyframes zoomOut {
+    0% { -webkit-transform: scale(.6); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes zoomOut {
+    0% { -moz-transform: scale(.6); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes zoomOut {
+    0% { -o-transform: scale(.6); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes zoomOut {
+    0% { transform: scale(.6); }
+    100% { transform: scale(1);}
 }
