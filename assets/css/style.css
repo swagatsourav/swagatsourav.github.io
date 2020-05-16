@@ -3,6 +3,7 @@
 /* Declaring teh variable for color theme */
 :root {
   --mt-color: #FED400;
+  --mt-color-link: #f2f2f2;
   /* --mt-color: #f7c221; */
   /* --mt-color: #e3e329; */
 }
@@ -200,6 +201,10 @@ h1, h2, h3, h4, h5, h6 {
   #header #logo img {
     max-height: 40px;
   }
+
+  #header {
+    padding: 10px;
+  }
 }
 
 
@@ -297,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
   /* padding: 0 8px 10px 8px; */
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: var(--mt-color-link);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* font-family: "Montserrat", sans-serif; */
   font-weight: 700;
