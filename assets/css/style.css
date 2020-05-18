@@ -1,12 +1,26 @@
 /* header,<section-pend>,Navigation */
 
 /* Declaring teh variable for color theme */
+
+@font-face {
+font-family: 'Brandon Grotesque Bold';
+src: local('Brandon Grotesque Bold'), url('../fonts/BrandonGrotesque/brandon_bld-webfont.woff') format('woff');
+}
+
+
 :root {
   --mt-color: #FED400;
-  --mt-color-link: #f2f2f2;
+  --mt-color-link: #CCCCCC;
   /* --mt-color: #f7c221; */
   /* --mt-color: #e3e329; */
+  --link-font: 'Russo One', sans-serif;
 }
+
+
+
+
+
+
 
 
 body {
@@ -302,11 +316,15 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: inline-block;
   color: var(--mt-color-link);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: 'Raleway', sans-serif;
+/* font-family: 'Galdeano', sans-serif; */
+  /* font-family: var(--link-font); */
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   /* font-family: "Montserrat", sans-serif; */
-  font-weight: 750;
-  font-size: 13px;
+  font-weight: 650;
+  font-size: 12px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   outline: none;
 
 }
@@ -672,6 +690,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 6px;
+  /* word-spacing: 3px; */
 
 }
 
@@ -682,7 +702,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-bottom: .5px solid white;
   border-radius: 4px;
   /* display: inline-block; */
-  max-width:330px;
+  max-width:400px;
   margin:auto;
   margin-bottom:20px;
   margin-top: 10vh;
@@ -748,7 +768,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 768px) {
 
   #intro p {
-    display:none;
+    /* display:none; */
+    /* margin-bottom: 20vh; */
   }
 
   #intro h2 {
@@ -772,7 +793,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 8px 32px;
     border-radius: 50px;
     transition: 0.5s;
-    margin:0;
+    margin-top:13vh;
+    margin-bottom:4vh;
     color: #fff;
     background: var(--mt-color);
 
@@ -780,7 +802,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     animation: swing-in-top-fwd cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 
     animation-duration: 1s;
-    animation-delay: 0.8s;
+    animation-delay: 0.9s;
   }
 
   #intro .carousel-caption-heading {
@@ -791,8 +813,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     /* display: inline-block; */
     max-width:330px;
     margin:auto;
-    margin-bottom:80px;
-    margin-top: 0;
+    margin-bottom:5vh;
+    margin-top:12vh;
+
 
   }
 
@@ -802,12 +825,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro p {
   width: 70%;
   margin: 0 auto 30px auto;
-  color: #fff;
+  color: #ccc;
   -webkit-animation: swing-in-top-fwd cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
   animation: swing-in-top-fwd cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-
+  font-family: "Raleway",sans-serif;
+  font-size:2vh;
   animation-duration: 1s;
   animation-delay: 0.8s;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-transform:uppercase;
+
 }
 
 @media (min-width: 1024px) {
