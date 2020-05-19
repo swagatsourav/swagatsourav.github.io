@@ -192,6 +192,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+#header #logo p a{
+  font-size: 10px;
+  color: var(--mt-color-link);
+  letter-spacing: 3px;
+
+}
 
 #header #logo h3 a, #header #logo h3 a:hover {
   color: #fff;
@@ -200,6 +206,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Yellow border in the left side of logo text */
 /* #header #logo #wrapping_logo_text{
   border-left: 4px solid var(--mt-color);
+  padding-left: 10px;
+  margin-bottom: 10px !important;
 } */
 
 
@@ -652,7 +660,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #intro .carousel-item::before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -680,6 +688,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro .carousel-content {
   text-align: center;
 }
+
+/* #intro #introCarousel{
+
+  transition: transform 2s ease, opacity 2s ease-out
+} */
 
 #intro h2 {
   color: #fff;
