@@ -141,8 +141,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding:0;
+  /* padding: 10px 0; */
   height: 72px;
   transition: all 0.5s;
 }
@@ -193,9 +194,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo p a{
-  font-size: 10px;
+  font-size: 8px;
   color: var(--mt-color-link);
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  font-family: "Montserrat",sans-serif;
+
+}
+
+@media (max-width: 768px) {
+
+  #header #logo p a{
+    font-size: 8px;
+    color: var(--mt-color-link);
+    letter-spacing: 3px;
+    font-family: "Montserrat",sans-serif;
+
+  }
 
 }
 
@@ -204,11 +218,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Yellow border in the left side of logo text */
-/* #header #logo #wrapping_logo_text{
-  border-left: 4px solid var(--mt-color);
+#header #logo #wrapping_logo_text{
+  border-left: 3px solid var(--mt-color);
   padding-left: 10px;
-  margin-bottom: 10px !important;
-} */
+  margin-bottom: 0px;
+  margin-top:0px;
+}
 
 
 #header #logo img {
@@ -302,6 +317,7 @@ h1, h2, h3, h4, h5, h6 {
 #nav-menu-container {
   float: right;
   margin: 0;
+  padding-top: 10px;
 }
 
 @media (min-width: 1024px) {
